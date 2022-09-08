@@ -1,7 +1,7 @@
-const SSG = ({ time }: { time: string }) => {
+const SSG = ({ buildTime }: { buildTime: string }) => {
   return (
     <div>
-      The time is {time}
+      Server side build time is {buildTime}
     </div>
   )
 }
@@ -10,7 +10,7 @@ export async function getStaticProps() {
   const timeResponse = await fetch('http://localhost:3000/api/time').then(res => res.json());
   return {
     props: {
-      time: timeResponse.time
+      buildTime: timeResponse.time
     },
     // revalidate: 10
   }

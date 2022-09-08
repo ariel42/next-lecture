@@ -1,7 +1,7 @@
 const SSR = ({ time }: { time: string }) => {
   return (
     <div>
-      The time is {time}
+      Server side time is {time}
     </div>
   )
 }
